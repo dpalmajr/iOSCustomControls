@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6DA82B9F1821F2CF00BF3902 /* CircularImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DA82B9E1821F2CF00BF3902 /* CircularImageView.m */; };
 		A72C8FCC181EFFD1009AB5BD /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A72C8FCB181EFFD1009AB5BD /* Foundation.framework */; };
 		A72C8FCE181EFFD1009AB5BD /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A72C8FCD181EFFD1009AB5BD /* CoreGraphics.framework */; };
 		A72C8FD0181EFFD1009AB5BD /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A72C8FCF181EFFD1009AB5BD /* UIKit.framework */; };
@@ -22,7 +23,7 @@
 		A72C8FF5181EFFD1009AB5BD /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = A72C8FF3181EFFD1009AB5BD /* InfoPlist.strings */; };
 		A72C8FF7181EFFD1009AB5BD /* iOSCustomControlsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A72C8FF6181EFFD1009AB5BD /* iOSCustomControlsTests.m */; };
 		A72C9002181F0015009AB5BD /* CircleView.m in Sources */ = {isa = PBXBuildFile; fileRef = A72C9001181F0015009AB5BD /* CircleView.m */; };
-		A72C9004181F0039009AB5BD /* 1338463987.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A72C9003181F0039009AB5BD /* 1338463987.jpg */; };
+		A72C9004181F0039009AB5BD /* 1338463987.png in Resources */ = {isa = PBXBuildFile; fileRef = A72C9003181F0039009AB5BD /* 1338463987.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +37,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		6DA82B9D1821F2CF00BF3902 /* CircularImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CircularImageView.h; sourceTree = "<group>"; };
+		6DA82B9E1821F2CF00BF3902 /* CircularImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CircularImageView.m; sourceTree = "<group>"; };
 		A72C8FC8181EFFD1009AB5BD /* iOSCustomControls.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iOSCustomControls.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A72C8FCB181EFFD1009AB5BD /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		A72C8FCD181EFFD1009AB5BD /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -57,7 +60,7 @@
 		A72C8FF6181EFFD1009AB5BD /* iOSCustomControlsTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = iOSCustomControlsTests.m; sourceTree = "<group>"; };
 		A72C9000181F0015009AB5BD /* CircleView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CircleView.h; sourceTree = "<group>"; };
 		A72C9001181F0015009AB5BD /* CircleView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CircleView.m; sourceTree = "<group>"; };
-		A72C9003181F0039009AB5BD /* 1338463987.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 1338463987.jpg; sourceTree = "<group>"; };
+		A72C9003181F0039009AB5BD /* 1338463987.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 1338463987.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -120,13 +123,15 @@
 				A72C8FDA181EFFD1009AB5BD /* AppDelegate.h */,
 				A72C8FDB181EFFD1009AB5BD /* AppDelegate.m */,
 				A72C8FDD181EFFD1009AB5BD /* Main.storyboard */,
-				A72C9003181F0039009AB5BD /* 1338463987.jpg */,
+				A72C9003181F0039009AB5BD /* 1338463987.png */,
 				A72C8FE0181EFFD1009AB5BD /* ViewController.h */,
 				A72C8FE1181EFFD1009AB5BD /* ViewController.m */,
 				A72C8FE3181EFFD1009AB5BD /* Images.xcassets */,
 				A72C8FD2181EFFD1009AB5BD /* Supporting Files */,
 				A72C9000181F0015009AB5BD /* CircleView.h */,
 				A72C9001181F0015009AB5BD /* CircleView.m */,
+				6DA82B9D1821F2CF00BF3902 /* CircularImageView.h */,
+				6DA82B9E1821F2CF00BF3902 /* CircularImageView.m */,
 			);
 			path = iOSCustomControls;
 			sourceTree = "<group>";
@@ -237,7 +242,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A72C8FE4181EFFD1009AB5BD /* Images.xcassets in Resources */,
-				A72C9004181F0039009AB5BD /* 1338463987.jpg in Resources */,
+				A72C9004181F0039009AB5BD /* 1338463987.png in Resources */,
 				A72C8FD6181EFFD1009AB5BD /* InfoPlist.strings in Resources */,
 				A72C8FDF181EFFD1009AB5BD /* Main.storyboard in Resources */,
 			);
@@ -260,6 +265,7 @@
 			files = (
 				A72C9002181F0015009AB5BD /* CircleView.m in Sources */,
 				A72C8FE2181EFFD1009AB5BD /* ViewController.m in Sources */,
+				6DA82B9F1821F2CF00BF3902 /* CircularImageView.m in Sources */,
 				A72C8FDC181EFFD1009AB5BD /* AppDelegate.m in Sources */,
 				A72C8FD8181EFFD1009AB5BD /* main.m in Sources */,
 			);
