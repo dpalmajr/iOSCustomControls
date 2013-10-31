@@ -21,7 +21,7 @@
 		A72C8FED181EFFD1009AB5BD /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A72C8FCF181EFFD1009AB5BD /* UIKit.framework */; };
 		A72C8FF5181EFFD1009AB5BD /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = A72C8FF3181EFFD1009AB5BD /* InfoPlist.strings */; };
 		A72C8FF7181EFFD1009AB5BD /* iOSCustomControlsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A72C8FF6181EFFD1009AB5BD /* iOSCustomControlsTests.m */; };
-		A72C9002181F0015009AB5BD /* CircleImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = A72C9001181F0015009AB5BD /* CircleImageView.m */; };
+		A72C9002181F0015009AB5BD /* CircleView.m in Sources */ = {isa = PBXBuildFile; fileRef = A72C9001181F0015009AB5BD /* CircleView.m */; };
 		A72C9004181F0039009AB5BD /* 1338463987.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A72C9003181F0039009AB5BD /* 1338463987.jpg */; };
 /* End PBXBuildFile section */
 
@@ -55,8 +55,8 @@
 		A72C8FF2181EFFD1009AB5BD /* iOSCustomControlsTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "iOSCustomControlsTests-Info.plist"; sourceTree = "<group>"; };
 		A72C8FF4181EFFD1009AB5BD /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		A72C8FF6181EFFD1009AB5BD /* iOSCustomControlsTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = iOSCustomControlsTests.m; sourceTree = "<group>"; };
-		A72C9000181F0015009AB5BD /* CircleImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CircleImageView.h; sourceTree = "<group>"; };
-		A72C9001181F0015009AB5BD /* CircleImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CircleImageView.m; sourceTree = "<group>"; };
+		A72C9000181F0015009AB5BD /* CircleView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CircleView.h; sourceTree = "<group>"; };
+		A72C9001181F0015009AB5BD /* CircleView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CircleView.m; sourceTree = "<group>"; };
 		A72C9003181F0039009AB5BD /* 1338463987.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 1338463987.jpg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -125,8 +125,8 @@
 				A72C8FE1181EFFD1009AB5BD /* ViewController.m */,
 				A72C8FE3181EFFD1009AB5BD /* Images.xcassets */,
 				A72C8FD2181EFFD1009AB5BD /* Supporting Files */,
-				A72C9000181F0015009AB5BD /* CircleImageView.h */,
-				A72C9001181F0015009AB5BD /* CircleImageView.m */,
+				A72C9000181F0015009AB5BD /* CircleView.h */,
+				A72C9001181F0015009AB5BD /* CircleView.m */,
 			);
 			path = iOSCustomControls;
 			sourceTree = "<group>";
@@ -258,7 +258,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A72C9002181F0015009AB5BD /* CircleImageView.m in Sources */,
+				A72C9002181F0015009AB5BD /* CircleView.m in Sources */,
 				A72C8FE2181EFFD1009AB5BD /* ViewController.m in Sources */,
 				A72C8FDC181EFFD1009AB5BD /* AppDelegate.m in Sources */,
 				A72C8FD8181EFFD1009AB5BD /* main.m in Sources */,
@@ -470,6 +470,7 @@
 				A72C8FFC181EFFD1009AB5BD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		A72C8FFD181EFFD1009AB5BD /* Build configuration list for PBXNativeTarget "iOSCustomControlsTests" */ = {
 			isa = XCConfigurationList;
@@ -478,6 +479,7 @@
 				A72C8FFF181EFFD1009AB5BD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface CircleImageView : UIView
+@interface CircleView : UIView
 
 @end

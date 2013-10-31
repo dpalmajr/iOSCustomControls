@@ -6,9 +6,9 @@
 //  Copyright (c) 2013 Donovan Palma. All rights reserved.
 //
 
-#import "CircleImageView.h"
+#import "CircleView.h"
 
-@implementation CircleImageView
+@implementation CircleView
 
 - (id)initWithFrame:(CGRect)frame
 {
