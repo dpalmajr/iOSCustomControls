@@ -10,4 +10,7 @@
 
 @interface CircularImageView : UIImageView
 
+@property(nonatomic,strong) NSURL *imageUrl;
+@property(nonatomic) float borderWidth;
+
 @end

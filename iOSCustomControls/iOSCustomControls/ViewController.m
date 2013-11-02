@@ -7,8 +7,11 @@
 //
 
 #import "ViewController.h"
+#import "CircularImageView.h"
 
 @interface ViewController ()
+
+@property (weak, nonatomic) IBOutlet CircularImageView *circleImageView;
 
 @end
 
@@ -18,6 +21,8 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
+    self.circleImageView.imageUrl = [NSURL URLWithString:@"http://user.spot.konquest.com/user/522b4e79417c709c1c000001/picture"];
+    [self.circleImageView setContentMode:UIViewContentModeScaleAspectFill];
 }
 
 - (void)didReceiveMemoryWarning

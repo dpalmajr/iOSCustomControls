@@ -8,7 +8,18 @@
 
 #import "CircularImageView.h"
 
+@interface CircularImageView()
+
+@property (nonatomic, strong, readonly) NSOperationQueue *imageQueue;
+
+@end
+
 @implementation CircularImageView
+
+static NSInteger kDefaultBorderWidth = 4.0f;
+
+@synthesize imageUrl = _imageUrl;
+@synthesize imageQueue = _imageQueue;
 
 - (id)initWithFrame:(CGRect)frame
 {
@@ -19,9 +30,40 @@
     return self;
 }
 
+-(void)awakeFromNib{
+    self.borderWidth = kDefaultBorderWidth;
+}
+
+-(NSOperationQueue *)imageQueue{
+    if (!_imageQueue){
+        _imageQueue = [[NSOperationQueue alloc]init];
+    }
+    return _imageQueue;
+    
+}
+
+-(NSURL *)imageUrl{
+    return _imageUrl;
+}
+
+-(void)setImageUrl:(NSURL *)imageUrl{
+    _imageUrl = imageUrl;
+    NSURLRequest *request = [NSURLRequest requestWithURL:_imageUrl];
+    
+    [NSURLConnection sendAsynchronousRequest:request queue:self.imageQueue completionHandler:^(NSURLResponse *repsonse, NSData *data, NSError *connectionError){
+        
+        dispatch_async(dispatch_get_main_queue(), ^(){
+            self.image = [UIImage imageWithData:data];
+        });
+    }];
+
+}
 
 -(void)willMoveToSuperview:(UIView *)newSuperview{
     //generate mask that will be applied to imageView
+    
+
+
     CALayer *maskLayer = [[CALayer alloc]init];
     maskLayer.frame = CGRectMake(0, 0, self.frame.size.width,self.frame.size.height);
     
@@ -33,7 +75,7 @@
     CAShapeLayer *mask = [CAShapeLayer layer];
     mask.fillColor = NULL;
     mask.strokeColor = [UIColor orangeColor].CGColor;
-    mask.lineWidth = 2.0f;
+    mask.lineWidth = self.borderWidth;
     mask.frame   = CGRectMake(0, 0, self.frame.size.width, self.frame.size.height);
     CGMutablePathRef path = CGPathCreateMutable();
     CGPathAddArc(path, NULL, self.frame.size.width/2, self.frame.size.height/2, self.frame.size.height/2, 0, 2*M_PI, YES);
