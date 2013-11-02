@@ -7,7 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "CircularImageViewDelegate.h"
 
-@interface ViewController : UIViewController
+@interface ViewController : UIViewController<CircularImageViewDelegate>
 
 @end

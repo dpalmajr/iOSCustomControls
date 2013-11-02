@@ -7,10 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "CircularImageViewDelegate.h"
 
 @interface CircularImageView : UIImageView
 
 @property(nonatomic,strong) NSURL *imageUrl;
 @property(nonatomic) float borderWidth;
+@property(nonatomic, weak) IBOutlet id<CircularImageViewDelegate> delegate;
 
 @end

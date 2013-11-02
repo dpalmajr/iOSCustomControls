@@ -31,4 +31,13 @@
     // Dispose of any resources that can be recreated.
 }
 
+#pragma mark - CircularImageViewDelegate methods
+-(CGColorRef)getBorderColor{
+    return [UIColor greenColor].CGColor;
+}
+
+-(float)getBorderWidth{
+    return 5.0f;
+}
+
 @end

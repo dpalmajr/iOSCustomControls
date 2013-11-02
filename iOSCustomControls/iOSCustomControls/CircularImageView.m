@@ -30,8 +30,16 @@ static NSInteger kDefaultBorderWidth = 4.0f;
     return self;
 }
 
+-(id)initWithCoder:(NSCoder *)aDecoder{
+    if (self = [super initWithCoder:aDecoder]){
+        return self;
+    }
+    
+    return nil;
+}
+
 -(void)awakeFromNib{
-    self.borderWidth = kDefaultBorderWidth;
+    _borderWidth = kDefaultBorderWidth;
 }
 
 -(NSOperationQueue *)imageQueue{
@@ -74,8 +82,14 @@ static NSInteger kDefaultBorderWidth = 4.0f;
     //generate shape that will be added to imageView
     CAShapeLayer *mask = [CAShapeLayer layer];
     mask.fillColor = NULL;
-    mask.strokeColor = [UIColor orangeColor].CGColor;
-    mask.lineWidth = self.borderWidth;
+    CGColorRef borderColor = [self.delegate getBorderColor];
+    
+    mask.strokeColor = borderColor == NULL ? [UIColor redColor].CGColor: borderColor;
+    
+    float borderWidth = [self.delegate getBorderWidth];
+    
+    mask.lineWidth = borderWidth <= 0 ? kDefaultBorderWidth:borderWidth;
+    
     mask.frame   = CGRectMake(0, 0, self.frame.size.width, self.frame.size.height);
     CGMutablePathRef path = CGPathCreateMutable();
     CGPathAddArc(path, NULL, self.frame.size.width/2, self.frame.size.height/2, self.frame.size.height/2, 0, 2*M_PI, YES);
